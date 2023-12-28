@@ -8,9 +8,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Fetch with header
-    const response = await fetch("http://localhost:5000/api/loginuser", {
-      // credentials: 'include',
-      // Origin:"http://localhost:3000/login",
+    const response = await fetch("https://restaurant-mgmt-backend-proj.onrender.com/api/loginuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
