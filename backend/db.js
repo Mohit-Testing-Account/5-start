@@ -1,9 +1,10 @@
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 dotenv.config();
+const mongoURI="mongodb+srv://gofood:mern12345@cluster0.olsw4jt.mongodb.net/gofoodmern?retryWrites=true&w=majority"
 const connectToMongo = async () => {
   try {
-    await mongoose.connect(`${process.env.mongoURI}`);
+    await mongoose.connect(mongoURI);
     console.log("Connected to MongoDB");
     const foodCollection= await mongoose.connection.db.collection("food_items");
     const foodItems = await foodCollection.find({}).toArray();
@@ -28,10 +29,6 @@ module.exports = connectToMongo;
 
 
 
-
-/*const data = await fetched_data.find({}).toArray();
-    global.food_items = data;
-    console.log(global.food_items);*/
 
 
 
