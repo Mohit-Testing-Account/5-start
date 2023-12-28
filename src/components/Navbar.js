@@ -18,7 +18,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark navcolor">
         <div className="container-fluid">
           <Link className="navbar-brand fs-1 fst-italic" to="/">
-            Zomato
+          5 Star Hotel 
           </Link>
           <button
             className="navbar-toggler"
